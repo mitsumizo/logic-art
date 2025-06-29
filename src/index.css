@@ -1,13 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #6a0dad; /* Deep Purple */
+  --secondary-color: #00bcd4; /* Cyan */
+  --background-color: #1a1a2e; /* Dark Blue/Purple */
+  --card-background: #2c2c4a; /* Slightly lighter dark blue */
+  --text-color: #e0e0e0; /* Light gray for text */
+  --heading-color: #ffffff; /* White for headings */
+  --border-color: #4a4a6a; /* Darker border */
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Poppins', 'Montserrat', -apple-system, BlinkMacMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Custom styles for a more modern look */
+.container.py-4 {
+  max-width: 960px;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+h1 {
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--card-background);
+  box-shadow: 0 8px 16px var(--shadow-color); /* More pronounced shadow */
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(106, 13, 173, 0.25);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.form-label {
+  color: var(--text-color);
+}
+
+.input-group-text {
+  background-color: var(--primary-color);
+  color: var(--heading-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+
+.btn {
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(106, 13, 173, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #8a2be2; /* Slightly lighter purple */
+  border-color: #8a2be2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(106, 13, 173, 0.4);
+}
+
+.btn-success {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 188, 212, 0.3);
+}
+
+.btn-success:hover {
+  background-color: #00e5ff; /* Slightly lighter cyan */
+  border-color: #00e5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 188, 212, 0.4);
+}
+
+.btn-danger {
+  background-color: #e91e63; /* Pink */
+  border-color: #e91e63;
+  box-shadow: 0 4px 8px rgba(233, 30, 99, 0.3);
+}
+
+.btn-danger:hover {
+  background-color: #ff4081; /* Slightly lighter pink */
+  border-color: #ff4081;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(233, 30, 99, 0.4);
+}
+
+/* Grid specific styles */
+.grid-container {
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 16px var(--shadow-color);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.grid-cell {
+  width: 25px;
+  height: 25px;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.grid-cell.filled {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
 }
